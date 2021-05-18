@@ -1,0 +1,8 @@
+version: '3'
+services:
+    book_algorithm_solution:
+        build:
+            context: ./
+        volumes:
+            - ./code:/usr/local/code
+        container_name: book_algorithm_solution
