@@ -6,8 +6,8 @@ def main():
     # x + y - s = z
     for i in range(k + 1):
         for j in range(k + 1):
-            z = (i + j - s)
-            if z <= 0 and abs(z) <= k:
+            z = s - i - j
+            if z >= 0 and z <= k:
                 ans += 1
     print(ans)
 
