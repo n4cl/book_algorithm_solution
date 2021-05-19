@@ -1,20 +1,15 @@
-# AtCoder Beginner Contest 081 の B で AC 確認済み
 
 def main():
     n = int(input())
-    a = list(map(int, input().split()))
-    ans = 0
-    i = 0
-    while True:
-        if a[i] % 2 != 0:
-            break
-        a[i] //= 2
-        i += 1
+    top, bottom = -1, float('inf')
+    for i in range(n):
+        a = int(input())
 
-        if i == n-1:
-            i = 0
-            ans += 1
+        if top < a:
+            top = a
+        if bottom > a:
+            bottom = a
 
-    print(ans)
+    print(top - bottom)
 
 main()

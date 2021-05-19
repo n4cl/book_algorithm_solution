@@ -1,15 +1,15 @@
 
 def main():
     n = int(input())
-    top, bottom = -1, float('inf')
+    mini, ans = float('inf'), float('inf')
     for i in range(n):
         a = int(input())
-
-        if top < a:
-            top = a
-        if bottom > a:
-            bottom = a
-
-    print(top - bottom)
+        if ans > a:
+            if mini > a:
+                ans = mini
+                mini = a
+            else:
+                ans = a
+    print(ans)
 
 main()
